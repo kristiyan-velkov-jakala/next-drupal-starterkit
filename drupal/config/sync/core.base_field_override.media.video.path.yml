@@ -1,0 +1,22 @@
+uuid: 42fb08f8-56f0-4561-862b-c3c7ba6bec7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.video
+  module:
+    - path
+_core:
+  default_config_hash: l7sVdyzg3dehxCJ7_vve-b9C2wfBlB1h9RsJjb7vR5I
+id: media.video.path
+field_name: path
+entity_type: media
+bundle: video
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
