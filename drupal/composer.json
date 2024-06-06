@@ -21,6 +21,7 @@
         "drupal/admin_toolbar": "^3.4",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-recommended": "^10.2",
+        "drupal/decoupled_router": "^2.0",
         "drupal/elasticsearch_helper": "^8.1",
         "drupal/graphql": "^4.7",
         "drupal/graphql_compose": "^2.1",
@@ -131,7 +132,8 @@
                 "#3049395-47 - Page Cache causes different subrequests to return the same responses": "https://www.drupal.org/files/issues/2022-12-06/subrequests-3049395-chnage-request-type-47.patch"
             },
             "drupal/decoupled_router": {
-                "#3111456-59 - Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2022-12-01/decouple_router-3111456-resolve-language-issue-58--get-translation.patch"
+                "#3111456-59 - Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2023-10-27/decoupled_router-3111456-resolve_lang-66-3397122.patch",
+                "Fix router for external destination paths": "./patches/decoupled_router/decoupled_router-fix-external-destination.patch"
             },
             "drupal/paragraphs": {
                 "Paragraphs (stable) title from form options not being applied (issue #3401581)": "https://www.drupal.org/files/issues/2023-11-14/paragraphs-custom-title-not-displayed-3401581-2.patch",
@@ -147,6 +149,11 @@
             },
             "drupal/webform_rest": {
                 "Fix fetching a webform submission by UUID": "https://www.drupal.org/files/issues/2024-01-17/webform_rest-Error-membe-%20function-replace-3415211-02.patch"
+            },
+            "drupal/redirect": {
+                "Don't allow adding source paths with trailing slashes, they won't ever work": "https://www.drupal.org/files/issues/2020-02-17/2932615-22.patch",
+                "Does not work for path alias - https://www.drupal.org/project/redirect/issues/2879648": "./patches/redirect/redirect-does_not_work_for_path_alias-2879648-23-rbdd9compat.patch",
+                "Redirection issue when interface language is different from content language": "https://www.drupal.org/files/issues/2020-06-01/redirect-interface_language_different_from_content_language_2991423-13.patch"
             }
         },
         "dropin-paths": {

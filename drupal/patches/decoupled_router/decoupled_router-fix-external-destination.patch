@@ -1,0 +1,22 @@
+diff --git a/src/EventSubscriber/RouterPathTranslatorSubscriber.php b/src/EventSubscriber/RouterPathTranslatorSubscriber.php
+index e1c065f..3c0483b 100644
+--- a/src/EventSubscriber/RouterPathTranslatorSubscriber.php
++++ b/src/EventSubscriber/RouterPathTranslatorSubscriber.php
+@@ -148,6 +148,17 @@ class RouterPathTranslatorSubscriber implements EventSubscriberInterface {
+     $path = $event->getPath();
+     $path = $this->cleanSubdirInPath($path, $event->getRequest());
+     $path = $this->cleanQueriesAndFragment($path);
++
++    // If URL is external, we won't perform checks for content in Drupal,
++    // but assume that it's working.
++    if (UrlHelper::isExternal($path)) {
++      $response->setStatusCode(200);
++      $response->setData([
++        'resolved' => $path,
++      ]);
++      return;
++    }
++
+     if ($this->languageManager->isMultilingual()) {
+       $path = $this->getPathFromAlias($path);
+     }

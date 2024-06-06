@@ -1,0 +1,46 @@
+diff --git a/src/Entity/Redirect.php b/src/Entity/Redirect.php
+index c1796c1..33a1a87 100644
+--- a/src/Entity/Redirect.php
++++ b/src/Entity/Redirect.php
+@@ -87,7 +87,13 @@ class Redirect extends ContentEntityBase {
+   public function preSave(EntityStorageInterface $storage_controller) {
+     // Get the language code directly from the field as language() might not
+     // be up to date if the language was just changed.
+-    $this->set('hash', Redirect::generateHash($this->redirect_source->path, (array) $this->redirect_source->query, $this->get('language')->value));
++    $path =  $this->redirect_source->path;
++    $real_path = \Drupal::service('path_alias.manager')->getPathByAlias('/' . $this->redirect_source->path, $this->get('language')->value);
++    if (!empty($real_path)) {
++      $path = ltrim($real_path,"/");
++    }
++    $hash = Redirect::generateHash($path, (array) $this->redirect_source->query, $this->get('language')->value);
++    $this->set('hash', $hash);
+   }
+
+   /**
+diff --git a/src/EventSubscriber/RedirectRequestSubscriber.php b/src/EventSubscriber/RedirectRequestSubscriber.php
+index b01869d57f..b168f7eb83 100644
+--- a/src/EventSubscriber/RedirectRequestSubscriber.php
++++ b/src/EventSubscriber/RedirectRequestSubscriber.php
+@@ -153,7 +153,7 @@ public function onKernelRequestCheckRedirect(RequestEvent $event) {
+       return;
+     }
+
+-    if (!empty($redirect)) {
++    if (!empty($redirect) && $redirect->getRedirectUrl()->toString() !== $request->getPathInfo()) {
+
+       // Handle internal path.
+       $url = $redirect->getRedirectUrl();
+diff --git a/src/Form/RedirectForm.php b/src/Form/RedirectForm.php
+index 629e733..331b895 100644
+--- a/src/Form/RedirectForm.php
++++ b/src/Form/RedirectForm.php
+@@ -122,6 +122,10 @@ class RedirectForm extends ContentEntityForm {
+
+     $parsed_url = UrlHelper::parse(trim($source['path']));
+     $path = isset($parsed_url['path']) ? $parsed_url['path'] : NULL;
++    $real_path = \Drupal::service('path_alias.manager')->getPathByAlias('/' . $path, $form_state->getValue('language')[0]['value']);
++    if (!empty($real_path)) {
++      $path = ltrim($real_path,"/");
++    }
+     $query = isset($parsed_url['query']) ? $parsed_url['query'] : NULL;
+     $hash = Redirect::generateHash($path, $query, $form_state->getValue('language')[0]['value']);
