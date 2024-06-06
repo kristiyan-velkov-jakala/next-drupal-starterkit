@@ -53,6 +53,21 @@ tooling:
     cmd:
       - appserver: /app/.lando/xdebug.sh
     user: root
+  xdebug-on:
+    service: appserver
+    description: Enable Xdebug.
+    user: root
+    cmd:
+      - docker-php-ext-enable xdebug && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
+      - tput setaf 2 && echo "Xdebug On" && tput sgr 0 && echo
+
+  xdebug-off:
+    service: appserver
+    description: Disable Xdebug.
+    user: root
+    cmd:
+      - rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
+      - tput setaf 1 && echo "Xdebug Off" && tput sgr 0 && echo
 
   # This custom message allows you to install a drupal recipe from the
   # /drupal/recipes folder. Drupal recipes are a new feature that is bein
@@ -113,7 +128,7 @@ services:
         DRUSH_OPTIONS_URI: https://next-drupal-starterkit.lndo.site
         # Support debugging with XDEBUG 3.
         XDEBUG_MODE:
-        PHP_IDE_CONFIG: serverName=appserver
+        PHP_IDE_CONFIG: "serverName=appserver"
         # PHPUnit settings. @see: .lando/phpunit.sh
         MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", {"browserName":"chrome","chromeOptions":{"args":["--disable-gpu","--headless"]}}, "http://chrome:9515"]'
 
