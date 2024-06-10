@@ -16,8 +16,7 @@ import {
   LISTING_ARTICLES,
 } from "@/lib/graphql/queries";
 import { extractEntityFromRouteQueryResult } from "@/lib/graphql/utils";
-import type { ArticleTeaserType } from "@/types/graphql";
-import type { FrontpageType } from "@/types/graphql";
+import type { ArticleTeaserType, FrontpageType } from "@/types/graphql";
 
 import { Divider } from "@/ui/divider";
 

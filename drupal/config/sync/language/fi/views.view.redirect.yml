@@ -3,4 +3,5 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Suodatus
           reset_button_label: Palauta

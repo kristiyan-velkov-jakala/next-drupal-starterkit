@@ -32,6 +32,7 @@ module:
   help: 0
   image: 0
   jsonapi: 0
+  jsonapi_extras: 0
   jsonapi_menu_items: 0
   jsonapi_resources: 0
   language: 0
@@ -45,7 +46,9 @@ module:
   metatag: 0
   mysql: 0
   next: 0
+  next_extras: 0
   next_graphql: 0
+  next_jsonapi: 0
   node: 0
   options: 0
   page_cache: 0

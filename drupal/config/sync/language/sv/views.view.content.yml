@@ -9,6 +9,7 @@ display:
           label: Funktioner
       exposed_form:
         options:
+          submit_button: Filtrera
           reset_button_label: Återställ
       filters:
         status:

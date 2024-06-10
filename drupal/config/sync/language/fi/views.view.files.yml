@@ -3,10 +3,13 @@ display:
     display_title: Oletus
     display_options:
       fields:
+        filename:
+          label: Nimi
         status:
           label: Tila
       exposed_form:
         options:
+          submit_button: Suodatus
           reset_button_label: Palauta
       filters:
         status:

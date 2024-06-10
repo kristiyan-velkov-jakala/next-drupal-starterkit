@@ -9,12 +9,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: process.env.NEXT_IMAGE_DOMAIN,
+        hostname: "next-drupal-starterkit.lndo.site",
+        // hostname: process.env.NEXT_IMAGE_DOMAIN,
         pathname: "**",
       },
     ],
   },
-  i18n,
+  // i18n,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,

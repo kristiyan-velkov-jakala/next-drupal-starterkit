@@ -9,6 +9,7 @@ display:
           label: Toimenpiteet
       exposed_form:
         options:
+          submit_button: Suodatus
           reset_button_label: Palauta
       filters:
         status:

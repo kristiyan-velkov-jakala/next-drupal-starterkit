@@ -22,7 +22,7 @@ export function PreviewBanner({ isVisible }: { isVisible: boolean }) {
     <div className="absolute top-0 z-50 w-full bg-steelgray px-2 py-2 text-center text-mischka">
       This page is a preview.{" "}
       {/* eslint-disable @next/next/no-html-link-for-pages */}
-      <a href="/api/exit-preview" className="underline">
+      <a href="/api/exit-preview_old" className="underline">
         Click here
       </a>{" "}
       to exit preview mode.
