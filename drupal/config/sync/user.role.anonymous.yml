@@ -7,6 +7,7 @@ dependencies:
   module:
     - media
     - rest
+    - subrequests
     - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
@@ -16,5 +17,6 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'issue subrequests'
   - 'restful post user_registration'
   - 'view media'

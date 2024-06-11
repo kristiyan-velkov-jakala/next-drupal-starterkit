@@ -3,11 +3,10 @@ session:
 url:
   source: path_prefix
   prefixes:
-    en: ''
+    en: en
     fi: fi
     sv: sv
   domains:
     en: ''
     fi: ''
     sv: ''
-selected_langcode: en
