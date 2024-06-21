@@ -1,0 +1,13 @@
+uuid: cac6062c-decc-495c-b8e0-08d7aa468fc8
+langcode: en
+status: true
+dependencies: {  }
+name: default_nextjs
+label: 'Default NextJs'
+effects:
+  ffe6e23d-c9eb-4c52-a426-76d67f7f2ec3:
+    uuid: ffe6e23d-c9eb-4c52-a426-76d67f7f2ec3
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp

@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: wOZVD8Wsf3NSSsAU36-FVkO7zaC4TgH_Buj0Up6vHYQ
+image_styles:
+  default_nextjs: default_nextjs
+  large: '0'
+  media_library: '0'
+  medium: '0'
+  thumbnail: '0'
+  wide: '0'
