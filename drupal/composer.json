@@ -155,6 +155,9 @@
                 "Don't allow adding source paths with trailing slashes, they won't ever work": "https://www.drupal.org/files/issues/2020-02-17/2932615-22.patch",
                 "Does not work for path alias - https://www.drupal.org/project/redirect/issues/2879648": "./patches/redirect/redirect-does_not_work_for_path_alias-2879648-23-rbdd9compat.patch",
                 "Redirection issue when interface language is different from content language": "https://www.drupal.org/files/issues/2020-06-01/redirect-interface_language_different_from_content_language_2991423-13.patch"
+            },
+            "drupal/jsonapi_image_styles": {
+                "Add config to make image style url relative": "https://www.drupal.org/files/issues/2024-06-26/jsonapi_image_styles-add_relative_path-3457280-2.patch"
             }
         },
         "dropin-paths": {
