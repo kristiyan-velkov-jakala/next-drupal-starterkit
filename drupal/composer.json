@@ -41,6 +41,7 @@
         "drupal/require_login": "^3.0",
         "drupal/restui": "^1.21",
         "drupal/simple_oauth": "^5.2",
+        "drupal/simple_sitemap": "^4.1",
         "drupal/simplei": "^2.0@beta",
         "drupal/token": "^1.14",
         "drupal/webform": "^6.2",
@@ -49,7 +50,8 @@
         "elasticsearch/elasticsearch": "^8.9",
         "vlucas/phpdotenv": "^5.4",
         "webflo/drupal-finder": "^1.2",
-        "wunderio/drupal-ping": "^2.4"
+        "wunderio/drupal-ping": "^2.4",
+        "ext-simplexml": "*"
     },
     "require-dev": {
         "drupal/core-dev": "^10.2",

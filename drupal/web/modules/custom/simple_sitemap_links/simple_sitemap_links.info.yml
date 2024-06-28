@@ -1,0 +1,8 @@
+name: Simple Sitemap Links
+type: module
+description: 'Provide links per simple sitemap.'
+package: Custom modules
+core: 10.x
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - drupal:simple_sitemap

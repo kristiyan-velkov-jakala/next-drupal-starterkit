@@ -52,7 +52,7 @@ $settings['wunder_next.settings']['client_viewer_id'] = $_ENV['DRUPAL_CLIENT_VIE
 $settings['wunder_next.settings']['client_viewer_secret'] = $_ENV['DRUPAL_CLIENT_VIEWER_SECRET'];
 
 // Use the frontend site URL to create links in the xml sitemap:
-$config['simple_sitemap.settings']['base_url'] = $_ENV['WUNDER_NEXT_FRONTEND_URL'];
+//$config['simple_sitemap.settings']['base_url'] = $_ENV['WUNDER_NEXT_FRONTEND_URL'];
 
 // Environment-specific settings.
 $env = $_ENV['ENVIRONMENT_NAME'];

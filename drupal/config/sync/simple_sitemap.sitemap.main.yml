@@ -1,0 +1,11 @@
+uuid: a0a25584-0514-41e8-9c03-54e056edb4e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_sitemap.type.default_hreflang
+id: main
+label: Main
+description: 'Main sitemap for all pages.'
+type: default_hreflang
+weight: 0

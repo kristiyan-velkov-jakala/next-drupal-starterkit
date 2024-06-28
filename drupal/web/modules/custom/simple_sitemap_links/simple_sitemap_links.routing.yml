@@ -1,0 +1,8 @@
+simple_sitemap_links.endpoint:
+  path: '/api/simple-sitemap-links/{sitemap}'
+  defaults:
+    _controller: '\Drupal\simple_sitemap_links\Controller\SimpleSitemapLinks::viewSitemap'
+    sitemap: ''
+    _title: 'Custom Sitemap Links'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,11 @@
+uuid: 43d634f2-a69c-4cab-92e5-a2b715aacdb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_sitemap.type.default_hreflang
+id: image
+label: Image
+description: ''
+type: default_hreflang
+weight: 0
