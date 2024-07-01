@@ -5,4 +5,4 @@ simple_sitemap_links.endpoint:
     sitemap: ''
     _title: 'Custom Sitemap Links'
   requirements:
-    _permission: 'access content'
+    _access: 'TRUE'
