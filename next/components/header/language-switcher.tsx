@@ -51,7 +51,8 @@ export function LanguageSwitcher() {
           .filter((l) => l !== locale)
           .map((l) => {
             // Find the translation for the current language code
-            const translation = translations.find((t) => t.langcode === l);
+            const translation =
+              translations?.find((t) => t.langcode === l) || "";
 
             // Use the language name from the siteConfig
             const languageName = siteConfig.locales[l].name;
@@ -60,7 +61,10 @@ export function LanguageSwitcher() {
               <li key={l}>
                 <Link
                   className="block p-2 hover:bg-primary-50"
-                  href={translation?.path || "/"} // Link to the translation path
+                  href={
+                    (typeof translation !== "string" && translation?.path) ||
+                    "/"
+                  } // Link to the translation path
                   locale={l} // This ensures locale handling if required by Next.js
                   onClick={() => setIsOpen(false)}
                 >
