@@ -4,13 +4,13 @@ const baseUrl = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL;
 const clientId = process.env.DRUPAL_CLIENT_ID;
 const clientSecret = process.env.DRUPAL_CLIENT_SECRET;
 
-console.log(clientId, clientSecret);
 // export const drupal = new DrupalClient(baseUrl, {
 //   auth: {
 //     clientId,
 //     clientSecret,
 //   },
 //   debug: true,
+//   withAuth: true,
 // });
 
 // TODO: Once you have migrated fully to App Router, switch to the leaner
