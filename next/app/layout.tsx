@@ -3,6 +3,8 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
+import { LanguageStoreProvider } from "@/components/providers/LanguageStoreProvider";
+
 import { i18n } from "@/next-i18next.config";
 
 export const metadata: Metadata = {
@@ -60,9 +62,7 @@ export default async function RootLayout({
         </html>*/
     <html>
       <body>
-        {/*<LanguageStoreProvider>*/}
-        {children}
-        {/*</LanguageStoreProvider>*/}
+        <LanguageStoreProvider>{children}</LanguageStoreProvider>
       </body>
     </html>
   );

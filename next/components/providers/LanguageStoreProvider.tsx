@@ -14,9 +14,9 @@ export const LanguageStoreContext =
   createContext<StoreApi<LanguageStore> | null>(null);
 
 export interface LanguageStoreProviderProps {
-  children: ReactNode;
-  translations: Translation[];
-  initialLocale: string;
+  children?: ReactNode;
+  translations?: Translation[];
+  initialLocale?: string;
 }
 
 export const LanguageStoreProvider = ({

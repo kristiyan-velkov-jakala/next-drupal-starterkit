@@ -8,7 +8,6 @@ import SearchIcon from "@/styles/icons/search.svg";
 import WunderIcon from "@/styles/icons/wunder.svg";
 import type { MenuType } from "@/types/graphql";
 
-import { LanguageSwitcher } from "./language-switcher";
 import { UserMenu } from "./user-menu";
 
 interface HeaderProps {

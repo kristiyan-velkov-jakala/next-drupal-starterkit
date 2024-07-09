@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { Locale } from "next-drupal";
 
-import { DeleteMe } from "@/components/delete_me";
 import { getData } from "@/lib/fetchArticle";
 
 export const metadata: Metadata = {
@@ -60,7 +59,6 @@ export default async function Home({
   // console.log(article);
   return (
     <>
-      <DeleteMe />
       {/*<pre>{JSON.stringify(json)}</pre>*/}
       {/*<Article node={article} />*/}
       {/* {nodes?.length ? (
