@@ -16,6 +16,7 @@
     ],
     "require": {
         "php": ">=8.2",
+        "ext-simplexml": "*",
         "composer/installers": "^2.1",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
@@ -40,6 +41,7 @@
         "drupal/registration_role": "^2.0",
         "drupal/require_login": "^3.0",
         "drupal/restui": "^1.21",
+        "drupal/robotstxt": "^1.5",
         "drupal/simple_oauth": "^5.2",
         "drupal/simple_sitemap": "^4.1",
         "drupal/simplei": "^2.0@beta",
@@ -50,8 +52,7 @@
         "elasticsearch/elasticsearch": "^8.9",
         "vlucas/phpdotenv": "^5.4",
         "webflo/drupal-finder": "^1.2",
-        "wunderio/drupal-ping": "^2.4",
-        "ext-simplexml": "*"
+        "wunderio/drupal-ping": "^2.4"
     },
     "require-dev": {
         "drupal/core-dev": "^10.2",

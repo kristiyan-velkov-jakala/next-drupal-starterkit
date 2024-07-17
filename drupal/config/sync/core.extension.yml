@@ -56,6 +56,8 @@ module:
   redirect: 0
   registration_role: 0
   rest: 0
+  robotstxt: 0
+  robotstxt_json: 0
   serialization: 0
   simple_oauth: 0
   simple_sitemap: 0

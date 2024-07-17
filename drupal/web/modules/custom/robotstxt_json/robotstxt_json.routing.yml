@@ -1,0 +1,7 @@
+robotstxt_json.endpoint:
+  path: '/api/robotstxt'
+  defaults:
+    _controller: '\Drupal\robotstxt_json\Controller\RobotstxtJson::viewRobotstxt'
+    _title: 'Custom Robotstxt json'
+  requirements:
+    _access: 'TRUE'

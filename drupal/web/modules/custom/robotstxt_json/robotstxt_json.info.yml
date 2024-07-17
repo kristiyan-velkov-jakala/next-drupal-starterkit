@@ -1,0 +1,8 @@
+name: Robotstxt json
+type: module
+description: 'Provide json structured robotstxt.'
+package: Custom modules
+core: 10.x
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - drupal:robotstxt
